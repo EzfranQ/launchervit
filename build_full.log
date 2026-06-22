@@ -1,0 +1,288 @@
+[1/529] Generating launchervit.6
+[2/529] Automatic MOC and UIC for target Launcher_murmur2
+[3/529] Automatic MOC and UIC for target qdcss
+[4/529] Automatic MOC and UIC for target BuildConfig
+[5/529] Automatic MOC and UIC for target nbt++
+[6/529] Automatic MOC and UIC for target Launcher_rainbow
+[7/529] Building CXX object libraries/qdcss/CMakeFiles/qdcss.dir/qdcss_autogen/mocs_compilation.cpp.o
+[8/529] Building CXX object libraries/murmur2/CMakeFiles/Launcher_murmur2.dir/Launcher_murmur2_autogen/mocs_compilation.cpp.o
+[9/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/nbt++_autogen/mocs_compilation.cpp.o
+[10/529] Automatic MOC and UIC for target GradleSpecifier
+[11/529] Automatic MOC and UIC for target LocalPeer
+[12/529] Automatic MOC and UIC for target GZip
+[13/529] Automatic MOC and UIC for target MojangVersionFormat
+[14/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/endian_str.cpp.o
+[15/529] Building CXX object libraries/murmur2/CMakeFiles/Launcher_murmur2.dir/src/MurmurHash2.cpp.o
+[16/529] Automatic MOC and UIC for target FileSystem
+[17/529] Building CXX object libraries/rainbow/CMakeFiles/Launcher_rainbow.dir/Launcher_rainbow_autogen/mocs_compilation.cpp.o
+[18/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/tag_string.cpp.o
+[19/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/tag_compound.cpp.o
+[20/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/io/stream_writer.cpp.o
+[21/529] Building Java objects for JavaCheck.jar
+warning: [options] bootstrap class path not set in conjunction with -source 7
+warning: [options] source value 7 is obsolete and will be removed in a future release
+warning: [options] target value 7 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+4 warnings
+[22/529] Generating CMakeFiles/JavaCheck.dir/java_class_filelist
+[23/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/io/stream_reader.cpp.o
+[24/529] Creating Java archive JavaCheck.jar
+[25/529] Linking CXX static library libraries/murmur2/libLauncher_murmur2.a
+[26/529] Building Java objects for NewLaunch.jar
+warning: [options] bootstrap class path not set in conjunction with -source 7
+warning: [options] source value 7 is obsolete and will be removed in a future release
+warning: [options] target value 7 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+4 warnings
+[27/529] Generating CMakeFiles/NewLaunch.dir/java_class_filelist
+[28/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/value_initializer.cpp.o
+[29/529] Building CXX object buildconfig/CMakeFiles/BuildConfig.dir/BuildConfig_autogen/mocs_compilation.cpp.o
+[30/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/tag.cpp.o
+[31/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/value.cpp.o
+[32/529] Creating Java archive NewLaunch.jar
+[33/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/text/json_formatter.cpp.o
+[34/529] Automatic MOC and UIC for target Library
+[35/529] Automatic MOC and UIC for target ResourceFolderModel
+[36/529] Automatic MOC and UIC for target ResourcePackParse
+[37/529] Automatic MOC and UIC for target TexturePackParse
+[38/529] Automatic MOC and UIC for target DataPackParse
+[39/529] Building CXX object libraries/rainbow/CMakeFiles/Launcher_rainbow.dir/src/rainbow.cpp.o
+[40/529] Linking CXX static library libraries/rainbow/libLauncher_rainbow.a
+[41/529] Building CXX object libraries/libnbtplusplus/CMakeFiles/nbt++.dir/src/tag_list.cpp.o
+[42/529] Linking CXX static library libraries/libnbtplusplus/libnbt++.a
+[43/529] Automatic MOC and UIC for target ShaderPackParse
+[44/529] Automatic MOC and UIC for target ParseUtils
+[45/529] Automatic MOC and UIC for target WorldSaveParse
+[46/529] Automatic MOC and UIC for target Task
+[47/529] Automatic MOC and UIC for target Packwiz
+[48/529] Automatic MOC and UIC for target INIFile
+[49/529] Automatic MOC and UIC for target JavaVersion
+[50/529] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LockedFile_unix.cpp.o
+[51/529] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LockedFile.cpp.o
+[52/529] Automatic MOC and UIC for target LauncherVit
+[53/529] Automatic MOC and UIC for target XmlLogs
+[54/529] Automatic MOC and UIC for target MetaComponentParse
+[55/529] Automatic MOC and UIC for target Version
+[56/529] Automatic MOC and UIC for target Index
+[57/529] Automatic MOC and UIC for target CatPack
+[58/529] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/LocalPeer_autogen/mocs_compilation.cpp.o
+[59/529] Building Java objects for NewLaunchLegacy.jar
+warning: [options] bootstrap class path not set in conjunction with -source 7
+warning: [options] source value 7 is obsolete and will be removed in a future release
+warning: [options] target value 7 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+legacy/org/prismlauncher/legacy/LegacyFrame.java:59: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+import java.applet.Applet;
+                  ^
+legacy/net/minecraft/Launcher.java:57: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+import java.applet.Applet;
+                  ^
+legacy/net/minecraft/Launcher.java:58: warning: [removal] AppletStub in java.applet has been deprecated and marked for removal
+import java.applet.AppletStub;
+                  ^
+legacy/org/prismlauncher/legacy/LegacyLauncher.java:63: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+import java.applet.Applet;
+                  ^
+legacy/org/prismlauncher/legacy/LegacyFrame.java:82: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    public LegacyFrame(String title, Applet applet) {
+                                     ^
+legacy/net/minecraft/Launcher.java:73: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+public final class Launcher extends Applet implements AppletStub {
+                                    ^
+legacy/net/minecraft/Launcher.java:73: warning: [removal] AppletStub in java.applet has been deprecated and marked for removal
+public final class Launcher extends Applet implements AppletStub {
+                                                      ^
+legacy/net/minecraft/Launcher.java:78: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    private Applet wrappedApplet;
+            ^
+legacy/net/minecraft/Launcher.java:82: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    public Launcher(Applet applet) {
+                    ^
+legacy/net/minecraft/Launcher.java:86: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    public Launcher(Applet applet, URL documentBase) {
+                    ^
+legacy/net/minecraft/Launcher.java:108: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    public void replace(Applet applet) {
+                        ^
+legacy/org/prismlauncher/legacy/LegacyLauncher.java:126: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+    private static Applet createAppletClass(String clazz) throws Throwable {
+                   ^
+legacy/org/prismlauncher/legacy/LegacyLauncher.java:130: warning: [removal] Applet in java.applet has been deprecated and marked for removal
+        return (Applet) appletConstructor.invoke();
+                ^
+17 warnings
+[60/529] Generating CMakeFiles/NewLaunchLegacy.dir/java_class_filelist
+[61/529] Creating Java archive NewLaunchLegacy.jar
+[62/529] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LocalPeer.cpp.o
+[63/529] Linking CXX static library libraries/LocalPeer/libLocalPeer.a
+[64/529] Building CXX object libraries/qdcss/CMakeFiles/qdcss.dir/src/qdcss.cpp.o
+[65/529] Linking CXX static library libraries/qdcss/libqdcss.a
+[66/529] Building CXX object buildconfig/CMakeFiles/BuildConfig.dir/BuildConfig.cpp.o
+[67/529] Linking CXX static library buildconfig/libBuildConfig.a
+[68/529] Automatic MOC and UIC for target Launcher_logic
+AutoUic: /home/ezfran/Downloads/PrismLauncher-develop/launcher/ui/dialogs/IconPickerDialog.ui: Warning: The name 'verticalLayout' (QVBoxLayout) is already in use, defaulting to 'verticalLayout1'.
+[69/529] Generating qrc_breeze_dark.cpp
+[70/529] Generating qrc_breeze_light.cpp
+[71/529] Generating qrc_flat_white.cpp
+[72/529] Generating qrc_pe_blue.cpp
+[73/529] Generating qrc_iOS.cpp
+[74/529] Generating qrc_pe_colored.cpp
+[75/529] Generating qrc_shaders.cpp
+[76/529] Generating qrc_flat.cpp
+[77/529] Generating qrc_OSX.cpp
+[78/529] Generating qrc_pe_light.cpp
+[79/529] Generating qrc_launchervit.cpp
+[80/529] Generating qrc_documents.cpp
+[81/529] Generating qrc_pe_dark.cpp
+[82/529] Generating qrc_backgrounds.cpp
+[83/529] Generating qrc_multimc.cpp
+[84/529] Building CXX object tests/CMakeFiles/FileSystem.dir/FileSystem_autogen/mocs_compilation.cpp.o
+[85/529] Building CXX object tests/CMakeFiles/Library.dir/Library_autogen/mocs_compilation.cpp.o
+[86/529] Building CXX object tests/CMakeFiles/GZip.dir/GZip_autogen/mocs_compilation.cpp.o
+[87/529] Building CXX object tests/CMakeFiles/GradleSpecifier.dir/GradleSpecifier_autogen/mocs_compilation.cpp.o
+[88/529] Building CXX object tests/CMakeFiles/ResourceFolderModel.dir/ResourceFolderModel_autogen/mocs_compilation.cpp.o
+[89/529] Building CXX object tests/CMakeFiles/MojangVersionFormat.dir/MojangVersionFormat_autogen/mocs_compilation.cpp.o
+[90/529] Building CXX object tests/CMakeFiles/ResourcePackParse.dir/ResourcePackParse_autogen/mocs_compilation.cpp.o
+[91/529] Building CXX object tests/CMakeFiles/TexturePackParse.dir/TexturePackParse_autogen/mocs_compilation.cpp.o
+[92/529] Building CXX object tests/CMakeFiles/DataPackParse.dir/DataPackParse_autogen/mocs_compilation.cpp.o
+[93/529] Building CXX object tests/CMakeFiles/ShaderPackParse.dir/ShaderPackParse_autogen/mocs_compilation.cpp.o
+[94/529] Building CXX object tests/CMakeFiles/WorldSaveParse.dir/WorldSaveParse_autogen/mocs_compilation.cpp.o
+[95/529] Building CXX object tests/CMakeFiles/ParseUtils.dir/ParseUtils_autogen/mocs_compilation.cpp.o
+[96/529] Building CXX object tests/CMakeFiles/ShaderPackParse.dir/ShaderPackParse_test.cpp.o
+[97/529] Building CXX object tests/CMakeFiles/Task.dir/Task_autogen/mocs_compilation.cpp.o
+[98/529] Building CXX object tests/CMakeFiles/GZip.dir/GZip_test.cpp.o
+[99/529] Building CXX object tests/CMakeFiles/INIFile.dir/INIFile_autogen/mocs_compilation.cpp.o
+[100/529] Building CXX object tests/CMakeFiles/MojangVersionFormat.dir/MojangVersionFormat_test.cpp.o
+[101/529] Building CXX object tests/CMakeFiles/JavaVersion.dir/JavaVersion_autogen/mocs_compilation.cpp.o
+[102/529] Building CXX object tests/CMakeFiles/GradleSpecifier.dir/GradleSpecifier_test.cpp.o
+[103/529] Building CXX object tests/CMakeFiles/Packwiz.dir/Packwiz_autogen/mocs_compilation.cpp.o
+[104/529] Building CXX object tests/CMakeFiles/ResourcePackParse.dir/ResourcePackParse_test.cpp.o
+[105/529] Building CXX object tests/CMakeFiles/Index.dir/Index_autogen/mocs_compilation.cpp.o
+[106/529] Building CXX object tests/CMakeFiles/ParseUtils.dir/ParseUtils_test.cpp.o
+[107/529] Building CXX object tests/CMakeFiles/Version.dir/Version_autogen/mocs_compilation.cpp.o
+[108/529] Building CXX object tests/CMakeFiles/TexturePackParse.dir/TexturePackParse_test.cpp.o
+[109/529] Building CXX object tests/CMakeFiles/MetaComponentParse.dir/MetaComponentParse_autogen/mocs_compilation.cpp.o
+[110/529] Building CXX object tests/CMakeFiles/ResourceFolderModel.dir/ResourceFolderModel_test.cpp.o
+[111/529] Building CXX object tests/CMakeFiles/CatPack.dir/CatPack_autogen/mocs_compilation.cpp.o
+[112/529] Building CXX object tests/CMakeFiles/Library.dir/Library_test.cpp.o
+[113/529] Building CXX object tests/CMakeFiles/XmlLogs.dir/XmlLogs_autogen/mocs_compilation.cpp.o
+[114/529] Building CXX object tests/CMakeFiles/WorldSaveParse.dir/WorldSaveParse_test.cpp.o
+[115/529] Building CXX object tests/CMakeFiles/DataPackParse.dir/DataPackParse_test.cpp.o
+[116/529] Building CXX object tests/CMakeFiles/Task.dir/Task_test.cpp.o
+[117/529] Building CXX object tests/CMakeFiles/FileSystem.dir/FileSystem_test.cpp.o
+[118/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_dark.cpp.o
+[119/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_light.cpp.o
+[120/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_colored.cpp.o
+[121/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_blue.cpp.o
+[122/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_breeze_dark.cpp.o
+[123/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_breeze_light.cpp.o
+[124/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_OSX.cpp.o
+[125/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_iOS.cpp.o
+[126/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_flat.cpp.o
+[127/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_flat_white.cpp.o
+[128/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_documents.cpp.o
+[129/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_shaders.cpp.o
+[130/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_backgrounds.cpp.o
+[131/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_launchervit.cpp.o
+[132/529] Building CXX object tests/CMakeFiles/JavaVersion.dir/JavaVersion_test.cpp.o
+[133/529] Building CXX object tests/CMakeFiles/MetaComponentParse.dir/MetaComponentParse_test.cpp.o
+[134/529] Building CXX object tests/CMakeFiles/INIFile.dir/INIFile_test.cpp.o
+[135/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_multimc.cpp.o
+[136/529] Building CXX object tests/CMakeFiles/Packwiz.dir/Packwiz_test.cpp.o
+[137/529] Building CXX object tests/CMakeFiles/Version.dir/Version_test.cpp.o
+[138/529] Building CXX object tests/CMakeFiles/CatPack.dir/CatPack_test.cpp.o
+[139/529] Building CXX object tests/CMakeFiles/Index.dir/Index_test.cpp.o
+[140/529] Building CXX object tests/CMakeFiles/XmlLogs.dir/XmlLogs_test.cpp.o
+[141/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx.gch
+[142/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/LoggedProcess.cpp
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringDecoder:1,
+                 from /home/ezfran/Downloads/PrismLauncher-develop/launcher/LoggedProcess.h:39,
+                 from /home/ezfran/Downloads/PrismLauncher-develop/launcher/LoggedProcess.cpp:37:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringconverter.h:65:5: internal compiler error: in wide_int_to_tree_1, at tree.cc:1755
+   65 |     { return iface ? iface->fromUtf16Len(inputLength) : 0; }
+      |     ^
+0x73e65682a1c9 __libc_start_call_main
+	../sysdeps/nptl/libc_start_call_main.h:58
+0x73e65682a28a __libc_start_main_impl
+	../csu/libc-start.c:360
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+Please include the complete backtrace with any bug report.
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[143/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/MMCZip.cpp
+In file included from /home/ezfran/Downloads/PrismLauncher-develop/launcher/MMCZip.h:48,
+                 from /home/ezfran/Downloads/PrismLauncher-develop/launcher/MMCZip.cpp:37:
+/home/ezfran/Downloads/PrismLauncher-develop/launcher/archive/ArchiveReader.h:72:5: internal compiler error: in wide_int_to_tree_1, at tree.cc:1755
+   72 |     size_t m_blockSize = 10240;
+      |     ^~~~~~
+0x7f5fe7a2a1c9 __libc_start_call_main
+	../sysdeps/nptl/libc_start_call_main.h:58
+0x7f5fe7a2a28a __libc_start_main_impl
+	../csu/libc-start.c:360
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+Please include the complete backtrace with any bug report.
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[144/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/BaseVersionList.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[145/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/archive/ArchiveWriter.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[146/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/archive/ArchiveReader.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[147/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceList.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/InstanceList.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/InstanceList.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/InstanceList.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/InstanceList.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/InstanceList.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[148/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/MessageLevel.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[149/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/Launcher_logic_autogen/mocs_compilation.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/Launcher_logic_autogen/mocs_compilation.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/Launcher_logic_autogen/mocs_compilation.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/Launcher_logic_autogen/mocs_compilation.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/Launcher_logic_autogen/mocs_compilation.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/mocs_compilation.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[150/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/InstanceTask.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[151/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/BaseInstaller.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[152/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/BaseInstance.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+[153/529] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o
+FAILED: launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o 
+/usr/bin/c++ -DLAUNCHER_APPLICATION -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_DISABLE_DEPRECATED_UP_TO=0x060400 -DQT_GUI_LIB -DQT_NETWORKAUTH_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WARN_DEPRECATED_UP_TO=0x060400 -DQT_WIDGETS_LIB -DQT_XML_LIB -DWITH_QTDBUS -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/launcher -I/home/ezfran/Downloads/PrismLauncher-develop/build/launcher/Launcher_logic_autogen/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2 -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/murmur2/src -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/libnbtplusplus/include -I/home/ezfran/Downloads/PrismLauncher-develop/build/libraries/libnbtplusplus -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/qdcss/include -I/home/ezfran/Downloads/PrismLauncher-develop/buildconfig -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/LocalPeer/include -I/home/ezfran/Downloads/PrismLauncher-develop/libraries/rainbow/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtXml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtConcurrent -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetworkAuth -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/x86_64-linux-gnu/qt6/QtDBus -O3 -DNDEBUG -std=gnu++20 -fstack-protector-strong --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unknown-warning-option -Wno-sfinae-incomplete -fPIC -DTOML_HEADER_ONLY=0 -DTOML_SHARED_LIB=1 -Winvalid-pch -include /home/ezfran/Downloads/PrismLauncher-develop/build/launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx -MD -MT launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o -MF launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o.d -o launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o -c /home/ezfran/Downloads/PrismLauncher-develop/launcher/InstanceDirUpdate.cpp
+c++: internal compiler error: Segmentation fault signal terminated program cc1plus
+Please submit a full bug report, with preprocessed source (by using -freport-bug).
+See <file:///usr/share/doc/gcc-13/README.Bugs> for instructions.
+ninja: build stopped: subcommand failed.

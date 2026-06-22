@@ -2,9 +2,9 @@
   description = "A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once (Fork of MultiMC)";
 
   nixConfig = {
-    extra-substituters = [ "https://prismlauncher.cachix.org" ];
+    extra-substituters = [ "https://launchervit.cachix.org" ];
     extra-trusted-public-keys = [
-      "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
+      "launchervit.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
     ];
   };
 
@@ -12,7 +12,7 @@
     nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
 
     libnbtplusplus = {
-      url = "github:PrismLauncher/libnbtplusplus";
+      url = "github:LauncherVit/libnbtplusplus";
       flake = false;
     };
   };
@@ -92,7 +92,7 @@
           packages' = self.packages.${system};
 
           welcomeMessage = ''
-            Welcome to the Prism Launcher repository! 🌈
+            Welcome to the LauncherVit repository! 🌈
 
             We just set some things up for you. To get building, you can run:
 
@@ -103,14 +103,14 @@
             ```
 
             Feel free to ask any questions in our Discord server or Matrix space:
-              - https://prismlauncher.org/discord
-              - https://matrix.to/#/#prismlauncher:matrix.org
+              - https://launchervit.com/discord
+              - https://matrix.to/#/#launchervit:matrix.org
 
             And thanks for helping out :)
           '';
 
           # Re-use our package wrapper to wrap our development environment
-          qt-wrapper-env = packages'.prismlauncher.overrideAttrs (old: {
+          qt-wrapper-env = packages'.launchervit.overrideAttrs (old: {
             name = "qt-wrapper-env";
 
             # Required to use script-based makeWrapper below
@@ -136,7 +136,7 @@
           default = mkShell {
             name = "prism-launcher";
 
-            inputsFrom = [ packages'.prismlauncher-unwrapped ];
+            inputsFrom = [ packages'.launchervit-unwrapped ];
 
             packages = [
               pkgs.ccache
@@ -162,7 +162,7 @@
             ];
 
             cmakeBuildType = "Debug";
-            cmakeFlags = [ "-GNinja" ] ++ packages'.prismlauncher-unwrapped.cmakeFlags;
+            cmakeFlags = [ "-GNinja" ] ++ packages'.launchervit-unwrapped.cmakeFlags;
             dontFixCmake = true;
 
             shellHook = ''
@@ -193,7 +193,7 @@
         in
 
         {
-          prismlauncher-unwrapped = prev.callPackage ./nix/unwrapped.nix {
+          launchervit-unwrapped = prev.callPackage ./nix/unwrapped.nix {
             inherit (llvm) stdenv;
             inherit
               libnbtplusplus
@@ -201,7 +201,7 @@
               ;
           };
 
-          prismlauncher = final.callPackage ./nix/wrapper.nix { };
+          launchervit = final.callPackage ./nix/wrapper.nix { };
         };
 
       packages = forAllSystems (
@@ -215,8 +215,8 @@
 
           # Grab our packages from it and set the default
           packages = {
-            inherit (prismPackages) prismlauncher-unwrapped prismlauncher;
-            default = prismPackages.prismlauncher;
+            inherit (prismPackages) launchervit-unwrapped launchervit;
+            default = prismPackages.launchervit;
           };
         in
 
@@ -234,11 +234,11 @@
         in
 
         {
-          prismlauncher-debug = packages'.prismlauncher.override {
-            prismlauncher-unwrapped = legacyPackages'.prismlauncher-unwrapped-debug;
+          launchervit-debug = packages'.launchervit.override {
+            launchervit-unwrapped = legacyPackages'.launchervit-unwrapped-debug;
           };
 
-          prismlauncher-unwrapped-debug = packages'.prismlauncher-unwrapped.overrideAttrs {
+          launchervit-unwrapped-debug = packages'.launchervit-unwrapped.overrideAttrs {
             cmakeBuildType = "Debug";
             dontStrip = true;
           };
