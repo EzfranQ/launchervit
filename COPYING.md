@@ -1,4 +1,4 @@
-## Prism Launcher
+## LauncherVit
 
      Prism Launcher - Minecraft Launcher
      Copyright (C) 2022-2026 Prism Launcher Contributors
