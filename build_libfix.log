@@ -1,0 +1,99 @@
+ninja: warning: premature end of file; recovering
+[0/1] Re-running CMake...
+-- Git commit: 2fdfccbef0095abfd899d9d7ca0336c9439208dc
+-- Git tag: -128-NOTFOUND
+-- Git refspec: refs/heads/main
+Installing in /home/ezfran/Downloads/PrismLauncher-develop/install. Run /home/ezfran/Downloads/PrismLauncher-develop/build/prefix.sh to set the environment for Launcher.
+-- Using precompiled headers for applicable launcher targets
+-- Enabling all warnings as errors for target 'Launcher_logic'
+-- Enabling all warnings as errors for target 'LauncherVit'
+CMake Warning at launcher/CMakeLists.txt:1615 (message):
+  Unable to find `clang-format`.  Not creating custom target
+
+
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/ezfran/Downloads/PrismLauncher-develop/build
+[1/458] Automatic MOC and UIC for target BuildConfig
+[2/457] Automatic MOC and UIC for target Launcher_logic
+[3/457] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/LocalPeer_autogen/mocs_compilation.cpp.o
+[4/457] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LockedFile.cpp.o
+[5/457] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LockedFile_unix.cpp.o
+[6/457] Building CXX object buildconfig/CMakeFiles/BuildConfig.dir/BuildConfig.cpp.o
+[7/457] Linking CXX static library buildconfig/libBuildConfig.a
+[8/457] Building CXX object libraries/qdcss/CMakeFiles/qdcss.dir/src/qdcss.cpp.o
+[9/457] Linking CXX static library libraries/qdcss/libqdcss.a
+[10/457] Building CXX object libraries/LocalPeer/CMakeFiles/LocalPeer.dir/src/LocalPeer.cpp.o
+[11/457] Linking CXX static library libraries/LocalPeer/libLocalPeer.a
+[12/457] Building CXX object tests/CMakeFiles/GradleSpecifier.dir/GradleSpecifier_autogen/mocs_compilation.cpp.o
+[13/457] Building CXX object tests/CMakeFiles/FileSystem.dir/FileSystem_autogen/mocs_compilation.cpp.o
+[14/457] Building CXX object tests/CMakeFiles/MojangVersionFormat.dir/MojangVersionFormat_autogen/mocs_compilation.cpp.o
+[15/457] Building CXX object tests/CMakeFiles/Library.dir/Library_autogen/mocs_compilation.cpp.o
+[16/457] Building CXX object tests/CMakeFiles/GZip.dir/GZip_autogen/mocs_compilation.cpp.o
+[17/457] Building CXX object tests/CMakeFiles/ResourceFolderModel.dir/ResourceFolderModel_autogen/mocs_compilation.cpp.o
+[18/457] Building CXX object tests/CMakeFiles/TexturePackParse.dir/TexturePackParse_autogen/mocs_compilation.cpp.o
+[19/457] Building CXX object tests/CMakeFiles/ResourcePackParse.dir/ResourcePackParse_autogen/mocs_compilation.cpp.o
+[20/457] Building CXX object tests/CMakeFiles/DataPackParse.dir/DataPackParse_autogen/mocs_compilation.cpp.o
+[21/457] Building CXX object tests/CMakeFiles/ShaderPackParse.dir/ShaderPackParse_autogen/mocs_compilation.cpp.o
+[22/457] Building CXX object tests/CMakeFiles/WorldSaveParse.dir/WorldSaveParse_autogen/mocs_compilation.cpp.o
+[23/457] Building CXX object tests/CMakeFiles/ParseUtils.dir/ParseUtils_autogen/mocs_compilation.cpp.o
+[24/457] Building CXX object tests/CMakeFiles/ParseUtils.dir/ParseUtils_test.cpp.o
+[25/457] Building CXX object tests/CMakeFiles/Task.dir/Task_autogen/mocs_compilation.cpp.o
+[26/457] Building CXX object tests/CMakeFiles/GZip.dir/GZip_test.cpp.o
+[27/457] Building CXX object tests/CMakeFiles/INIFile.dir/INIFile_autogen/mocs_compilation.cpp.o
+[28/457] Building CXX object tests/CMakeFiles/GradleSpecifier.dir/GradleSpecifier_test.cpp.o
+[29/457] Building CXX object tests/CMakeFiles/JavaVersion.dir/JavaVersion_autogen/mocs_compilation.cpp.o
+[30/457] Building CXX object tests/CMakeFiles/MojangVersionFormat.dir/MojangVersionFormat_test.cpp.o
+[31/457] Building CXX object tests/CMakeFiles/Packwiz.dir/Packwiz_autogen/mocs_compilation.cpp.o
+[32/457] Building CXX object tests/CMakeFiles/ResourcePackParse.dir/ResourcePackParse_test.cpp.o
+[33/457] Building CXX object tests/CMakeFiles/Index.dir/Index_autogen/mocs_compilation.cpp.o
+[34/457] Building CXX object tests/CMakeFiles/DataPackParse.dir/DataPackParse_test.cpp.o
+[35/457] Building CXX object tests/CMakeFiles/Version.dir/Version_autogen/mocs_compilation.cpp.o
+[36/457] Building CXX object tests/CMakeFiles/TexturePackParse.dir/TexturePackParse_test.cpp.o
+[37/457] Building CXX object tests/CMakeFiles/MetaComponentParse.dir/MetaComponentParse_autogen/mocs_compilation.cpp.o
+[38/457] Building CXX object tests/CMakeFiles/WorldSaveParse.dir/WorldSaveParse_test.cpp.o
+[39/457] Building CXX object tests/CMakeFiles/CatPack.dir/CatPack_autogen/mocs_compilation.cpp.o
+[40/457] Building CXX object tests/CMakeFiles/ShaderPackParse.dir/ShaderPackParse_test.cpp.o
+[41/457] Building CXX object tests/CMakeFiles/XmlLogs.dir/XmlLogs_autogen/mocs_compilation.cpp.o
+[42/457] Building CXX object tests/CMakeFiles/ResourceFolderModel.dir/ResourceFolderModel_test.cpp.o
+[43/457] Building CXX object tests/CMakeFiles/FileSystem.dir/FileSystem_test.cpp.o
+[44/457] Building CXX object tests/CMakeFiles/Library.dir/Library_test.cpp.o
+[45/457] Building CXX object tests/CMakeFiles/JavaVersion.dir/JavaVersion_test.cpp.o
+[46/457] Building CXX object tests/CMakeFiles/Task.dir/Task_test.cpp.o
+[47/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_dark.cpp.o
+[48/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_light.cpp.o
+[49/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_blue.cpp.o
+[50/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_pe_colored.cpp.o
+[51/457] Building CXX object tests/CMakeFiles/Packwiz.dir/Packwiz_test.cpp.o
+[52/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_breeze_dark.cpp.o
+[53/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_breeze_light.cpp.o
+[54/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_flat.cpp.o
+[55/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_iOS.cpp.o
+[56/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_OSX.cpp.o
+[57/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_shaders.cpp.o
+[58/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_flat_white.cpp.o
+[59/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_backgrounds.cpp.o
+[60/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_documents.cpp.o
+[61/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_launchervit.cpp.o
+[62/457] Building CXX object tests/CMakeFiles/CatPack.dir/CatPack_test.cpp.o
+[63/457] Building CXX object tests/CMakeFiles/Version.dir/Version_test.cpp.o
+[64/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/qrc_multimc.cpp.o
+[65/457] Building CXX object tests/CMakeFiles/INIFile.dir/INIFile_test.cpp.o
+[66/457] Building CXX object tests/CMakeFiles/MetaComponentParse.dir/MetaComponentParse_test.cpp.o
+[67/457] Building CXX object tests/CMakeFiles/XmlLogs.dir/XmlLogs_test.cpp.o
+[68/457] Building CXX object tests/CMakeFiles/Index.dir/Index_test.cpp.o
+[69/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/cmake_pch.hxx.gch
+[70/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/MessageLevel.cpp.o
+[71/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceTask.cpp.o
+[72/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/LoggedProcess.cpp.o
+[73/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveWriter.cpp.o
+[74/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseInstaller.cpp.o
+[75/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceDirUpdate.cpp.o
+[76/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseVersionList.cpp.o
+[77/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/archive/ArchiveReader.cpp.o
+[78/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/MMCZip.cpp.o
+[79/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceCopyPrefs.cpp.o
+[80/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/StringUtils.cpp.o
+[81/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/BaseInstance.cpp.o
+[82/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/InstanceCreationTask.cpp.o
+[83/457] Building CXX object launcher/CMakeFiles/Launcher_logic.dir/Json.cpp.o
