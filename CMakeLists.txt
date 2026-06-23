@@ -175,7 +175,7 @@ endif()
 ##################################### Set Application options #####################################
 
 ######## Set URLs ########
-set(Launcher_NEWS_RSS_URL "https://launchervit.com/feed/feed.xml" CACHE STRING "URL to fetch LauncherVit's news RSS feed from.")
+set(Launcher_NEWS_RSS_URL "" CACHE STRING "URL to fetch LauncherVit's news RSS feed from.")
 set(Launcher_NEWS_OPEN_URL "https://launchervit.com/news" CACHE STRING "URL that gets opened when the user clicks 'More News'")
 set(Launcher_WIKI_URL "https://launchervit.com/wiki/" CACHE STRING "URL that gets opened when the user clicks 'Launcher Help'")
 set(Launcher_HELP_URL "https://launchervit.com/wiki/help-pages/%1" CACHE STRING "URL (with arg %1 to be substituted with page-id) that gets opened when the user requests help in a dialog window")
