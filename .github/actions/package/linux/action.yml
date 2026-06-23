@@ -94,9 +94,9 @@ runs:
         echo "PRISMLAUNCHER_DISABLE_GLVULKAN=1" >> "$INSTALL_APPIMAGE_DIR"/.env
         #makes the launcher use portals for file picking
         echo "QT_QPA_PLATFORMTHEME=xdgdesktopportal" >> "$INSTALL_APPIMAGE_DIR"/.env
-        ln -s org.launchervit.LauncherVit.metainfo.xml "$INSTALL_APPIMAGE_DIR"/share/metainfo/org.launchervit.LauncherVit.appdata.xml
-        ln -s share/applications/org.launchervit.LauncherVit.desktop "$INSTALL_APPIMAGE_DIR"
-        ln -s share/icons/hicolor/256x256/apps/org.launchervit.LauncherVit.png "$INSTALL_APPIMAGE_DIR"
+        ln -s com.launchervit.LauncherVit.metainfo.xml "$INSTALL_APPIMAGE_DIR"/share/metainfo/com.launchervit.LauncherVit.appdata.xml
+        ln -s share/applications/com.launchervit.LauncherVit.desktop "$INSTALL_APPIMAGE_DIR"
+        ln -s share/icons/hicolor/256x256/apps/com.launchervit.LauncherVit.png "$INSTALL_APPIMAGE_DIR"
         mv "$INSTALL_APPIMAGE_DIR"/{sharun,AppRun}
         ls -la "$INSTALL_APPIMAGE_DIR"
 
