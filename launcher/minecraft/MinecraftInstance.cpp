@@ -1182,14 +1182,15 @@ LaunchTask* MinecraftInstance::createLaunchTask(AuthSessionPtr session, Minecraf
         process->appendStep(step);
     }
 
-    // if we aren't in offline mode
+    // ClaimAccount only applies to online (Microsoft) sessions
     if (session->launchMode != LaunchMode::Offline) {
         process->appendStep(makeShared<ClaimAccount>(pptr, session));
-        for (auto t : createUpdateTask()) {
-            process->appendStep(makeShared<TaskStepWrapper>(pptr, t));
-        }
-    } else {
-        process->appendStep(makeShared<EnsureOfflineLibraries>(pptr, this));
+    }
+    // Always run the update task so any missing libraries/assets get downloaded.
+    // This lets offline/local accounts download what they need when an internet
+    // connection is available, instead of failing outright.
+    for (auto t : createUpdateTask()) {
+        process->appendStep(makeShared<TaskStepWrapper>(pptr, t));
     }
 
     // if there are any jar mods
