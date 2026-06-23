@@ -275,8 +275,8 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
         connect(secretEventFilter, &KonamiCode::triggered, this, &MainWindow::konamiTriggered);
     }
 
-    // Add the news label to the news toolbar.
-    {
+    // Add the news label to the news toolbar (only when a news feed is configured).
+    if (!BuildConfig.NEWS_RSS_URL.isEmpty()) {
         m_newsChecker.reset(new NewsChecker(APPLICATION->network(), BuildConfig.NEWS_RSS_URL));
         newsLabel = new QToolButton();
         newsLabel->setIcon(QIcon::fromTheme("news"));
@@ -288,6 +288,9 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
         connect(newsLabel, &QAbstractButton::clicked, this, &MainWindow::newsButtonClicked);
         connect(m_newsChecker.get(), &NewsChecker::newsLoaded, this, &MainWindow::updateNewsLabel);
         updateNewsLabel();
+    } else {
+        // No news feed configured: hide the whole news toolbar.
+        ui->newsToolBar->setVisible(false);
     }
 
     // Create the instance list widget
@@ -407,7 +410,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     // auto accounts = APPLICATION->accounts();
 
     // load the news
-    {
+    if (m_newsChecker) {
         m_newsChecker->reloadNews();
         updateNewsLabel();
     }
@@ -806,6 +809,9 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* ev)
 
 void MainWindow::updateNewsLabel()
 {
+    // No news feed configured: the news toolbar is hidden and there is nothing to update.
+    if (!m_newsChecker || !newsLabel)
+        return;
     if (m_newsChecker->isLoadingNews()) {
         newsLabel->setText(tr("Loading news..."));
         newsLabel->setEnabled(false);
