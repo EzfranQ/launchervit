@@ -33,12 +33,6 @@ On Linux, we also offer our own [Flatpak nightly repository](https://github.com/
 
 ## Community & Support
 
-Feel free to create a GitHub issue if you find a bug or want to suggest a new feature. We have multiple community spaces where other community members can help you:
-
-- **Our Discord server:**
-
-[![LauncherVit Discord server](https://discordapp.com/api/guilds/1031648380885147709/widget.png?style=banner3)](https://launchervit.com/discord)
-
 - **Our Matrix space:**
 
 [![LauncherVit Space](https://img.shields.io/matrix/launchervit:matrix.org?style=for-the-badge&label=Matrix%20Space&logo=matrix&color=purple)](https://launchervit.com/matrix)
@@ -59,17 +53,6 @@ If you want to build LauncherVit yourself, check the [build instructions](https:
 
 We thank all the wonderful backers over at Open Collective! Support LauncherVit by [becoming a backer](https://opencollective.com/launchervit).
 
-[![OpenCollective Backers](https://opencollective.com/launchervit/backers.svg?width=890&limit=1000)](https://opencollective.com/launchervit#backers)
-
-Thanks to JetBrains for providing us a few licenses for all their products, as part of their [Open Source program](https://www.jetbrains.com/opensource/).
-
-<a href="https://jb.gg/OpenSource">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://www.jetbrains.com/company/brand/img/logo_jb_dos_4.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg">
-  <img alt="JetBrains logo" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg" width="40%">
-</picture>
-</a>
 
 Thanks to Weblate for hosting our translation efforts.
 
