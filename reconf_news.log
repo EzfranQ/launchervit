@@ -1,0 +1,15 @@
+-- Git commit: a6345e6760d98e82755c64e5597a0573bd69281b
+-- Git tag: -128-NOTFOUND
+-- Git refspec: refs/heads/main
+Installing in /home/ezfran/Downloads/PrismLauncher-develop/install. Run /home/ezfran/Downloads/PrismLauncher-develop/build/prefix.sh to set the environment for Launcher.
+-- Found Java: /usr/bin/java (found suitable version "21.0.11", minimum required is "1.7") found components: Development 
+-- Using precompiled headers for applicable launcher targets
+-- Enabling all warnings as errors for target 'Launcher_logic'
+-- Enabling all warnings as errors for target 'LauncherVit'
+CMake Warning at launcher/CMakeLists.txt:1615 (message):
+  Unable to find `clang-format`.  Not creating custom target
+
+
+-- Configuring done (0.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/ezfran/Downloads/PrismLauncher-develop/build
