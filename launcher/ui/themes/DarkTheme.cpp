@@ -97,6 +97,8 @@ QToolButton::menu-button { border: none; width: 18px; border-top-right-radius: 8
 /* ---- Instance rail (vertical, main window): wide, spacious, text-only ---- */
 WideBar#instanceToolBar { padding: 8px; }
 WideBar#instanceToolBar QToolButton { min-width: 176px; min-height: 22px; padding: 9px 16px; border-radius: 8px; font-size: 10pt; text-align: left; }
+/* The instance icon and name buttons scale their content to the button rect — keep them centered with no heavy padding so the icon isn't clipped. */
+WideBar#instanceToolBar QToolButton#changeIconButton, WideBar#instanceToolBar QToolButton#renameButton { min-width: 0px; padding: 3px; text-align: center; }
 QToolButton#actionLaunchInstance { background: #A855F7; color: #ffffff; border-radius: 10px; padding: 13px 16px; font-weight: 700; font-size: 11pt; }
 QToolButton#actionLaunchInstance:hover { background: #9333EA; }
 QToolButton#actionLaunchInstance:pressed { background: #7E22CE; }
