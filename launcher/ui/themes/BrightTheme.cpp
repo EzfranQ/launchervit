@@ -103,8 +103,22 @@ QToolButton#actionLaunchInstance:pressed { background: #6D28D9; }
 QToolButton#actionLaunchInstance:disabled { background: rgba(126,34,206,0.28); color: rgba(255,255,255,0.7); }
 
 /* Account button (top-right): same width as the instance rail, sits above it */
-QToolButton#accountMenuButton { min-width: 176px; padding: 8px 16px; border-radius: 8px; text-align: center; font-weight: 600; }
-QToolButton#accountMenuButton::menu-indicator, QToolButton#accountMenuButton::menu-arrow { image: none; width: 0px; height: 0px; }
+/* ---- Left navigation rail (mainToolBar) ---- */
+QToolBar#mainToolBar { background: rgba(0,0,0,0.06); border: none; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding: 12px 8px; spacing: 8px; }
+QToolBar#mainToolBar QToolButton { min-width: 42px; min-height: 42px; padding: 8px; border-radius: 12px; }
+QToolBar#mainToolBar QToolButton:hover { background: rgba(168,85,247,0.16); border-color: transparent; }
+QToolBar#mainToolBar QToolButton:checked, QToolBar#mainToolBar QToolButton:pressed { background: #7E22CE; }
+QToolBar#mainToolBar QToolButton#accountMenuButton { min-width: 42px; min-height: 42px; padding: 8px; border-radius: 21px; }
+QToolBar#mainToolBar QToolButton::menu-indicator, QToolBar#mainToolBar QToolButton::menu-arrow { image: none; width: 0px; height: 0px; }
+QToolBar#mainToolBar::separator { background: rgba(0,0,0,0.08); height: 1px; margin: 6px 10px; }
+
+/* ---- Custom title bar ---- */
+QToolBar#titleToolBar { padding: 0px; margin: 0px; border: none; spacing: 0px; background: #ffffff; }
+QWidget#customTitleBar { background: #ffffff; }
+QLabel#titleBarLabel { font-weight: 600; color: #111111; }
+QToolButton#winBtnMin, QToolButton#winBtnMax, QToolButton#winBtnClose { border: none; border-radius: 6px; background: transparent; color: rgba(0,0,0,0.6); font-size: 12pt; }
+QToolButton#winBtnMin:hover, QToolButton#winBtnMax:hover { background: rgba(168,85,247,0.20); }
+QToolButton#winBtnClose:hover { background: #e11d48; color: #ffffff; }
 
 /* ---- Push buttons ---- */
 QPushButton { border: 1px solid rgba(0,0,0,0.15); border-radius: 7px; padding: 7px 16px; min-height: 18px; }
