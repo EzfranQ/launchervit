@@ -11,9 +11,17 @@ class ActionButton : public QToolButton {
         : QToolButton(parent), m_action(action), m_use_default_action(use_default_action)
     {
         setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        // The main-window instance rail is text-only for a cleaner, more professional look;
+        // page toolbars (mods, worlds, servers, ...) keep icon + text.
+        auto* parentBar = qobject_cast<QToolBar*>(parent);
+        if (parentBar && parentBar->objectName() == QLatin1String("instanceToolBar"))
+            setToolButtonStyle(Qt::ToolButtonTextOnly);
+        else
+            setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         // workaround for breeze and breeze forks
         setProperty("_kde_toolButton_alignment", Qt::AlignLeft);
+        // Inherit the action's objectName so themes can target specific buttons (e.g. #actionLaunchInstance)
+        setObjectName(action->objectName());
 
         if (m_use_default_action) {
             setDefaultAction(action);

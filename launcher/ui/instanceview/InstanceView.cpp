@@ -473,36 +473,43 @@ void InstanceView::paintEvent([[maybe_unused]] QPaintEvent* event)
 
         // calculate the rect for the overlay
         painter.setRenderHint(QPainter::Antialiasing, true);
-        QFont font("sans", 20);
+        QFont font = this->font();
+        font.setPointSizeF(font.pointSizeF() > 0 ? font.pointSizeF() * 1.6 : 16.0);
         font.setBold(true);
 
         QRect bounds = viewport()->geometry();
         bounds.moveTop(0);
         auto innerBounds = bounds;
-        innerBounds.adjust(10, 10, -10, -10);
+        innerBounds.adjust(24, 24, -24, -24);
 
-        QColor background = QApplication::palette().color(QPalette::WindowText);
-        QColor foreground = QApplication::palette().color(QPalette::Base);
-        foreground.setAlpha(190);
+        // Subtle, on-brand welcome card: blends with the surface, thin accent border, muted text
+        // (previously this inverted to a glaring near-white box on dark themes).
+        QColor surface = QApplication::palette().color(QPalette::Base);
+        surface.setAlpha(220);
+        QColor border = QApplication::palette().color(QPalette::Highlight);
+        border.setAlpha(150);
+        QColor foreground = QApplication::palette().color(QPalette::WindowText);
+        foreground.setAlpha(160);
         painter.setFont(font);
         auto fontMetrics = painter.fontMetrics();
         auto textRect = fontMetrics.boundingRect(innerBounds, Qt::AlignHCenter | Qt::TextWordWrap, emptyString);
         textRect.moveCenter(bounds.center());
 
         auto wrapRect = textRect;
-        wrapRect.adjust(-10, -10, 10, 10);
+        wrapRect.adjust(-28, -22, 28, 22);
 
         // check if we are allowed to draw in our area
         if (!event->rect().intersects(wrapRect)) {
             return;
         }
 
-        painter.setBrush(QBrush(background));
-        painter.setPen(foreground);
-        painter.drawRoundedRect(wrapRect, 5.0, 5.0);
+        QPen borderPen(border);
+        borderPen.setWidth(1);
+        painter.setBrush(QBrush(surface));
+        painter.setPen(borderPen);
+        painter.drawRoundedRect(wrapRect, 12.0, 12.0);
 
         painter.setPen(foreground);
-        painter.setFont(font);
         painter.drawText(textRect, Qt::AlignHCenter | Qt::TextWordWrap, emptyString);
 
         painter.restore();
