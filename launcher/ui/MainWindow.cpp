@@ -65,10 +65,13 @@
 #include <QMenu>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QMouseEvent>
 #include <QProgressDialog>
 #include <QShortcut>
+#include <QSizeGrip>
 #include <QStatusBar>
 #include <QToolBar>
+#include <QWindow>
 #include <QToolButton>
 #include <QWidget>
 #include <QWidgetAction>
@@ -150,6 +153,8 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
 {
     ui->setupUi(this);
 
+    setupCustomTitleBar();
+
     setWindowIcon(APPLICATION->logo());
     setWindowTitle(APPLICATION->applicationDisplayName());
 #ifndef QT_NO_ACCESSIBILITY
@@ -206,11 +211,10 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
 
         auto accountMenuButton = dynamic_cast<QToolButton*>(ui->mainToolBar->widgetForAction(ui->actionAccountsButton));
         accountMenuButton->setPopupMode(QToolButton::InstantPopup);
-        // Name it so the theme can size the account button to match the instance rail width.
+        // Name it so the theme can style the account button on the left nav rail.
         accountMenuButton->setObjectName("accountMenuButton");
-        // Text-only so the label centers cleanly (Fusion left-aligns icon+text tool buttons and
-        // ignores text-align); this matches the centered text buttons of the instance rail.
-        accountMenuButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        // Icon-only on the vertical left rail (the avatar acts as the profile entry, like the mockup).
+        accountMenuButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
 
         auto exportInstanceMenu = new QMenu(this);
         exportInstanceMenu->addAction(ui->actionExportInstanceZip);
@@ -363,10 +367,10 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     // Lock toolbars
     {
-        bool toolbarsLocked = APPLICATION->settings()->get("ToolbarsLocked").toBool();
-        ui->actionLockToolbars->setChecked(toolbarsLocked);
-        connect(ui->actionLockToolbars, &QAction::toggled, this, &MainWindow::lockToolbars);
-        lockToolbars(toolbarsLocked);
+        // Toolbars are permanently locked: no drag handles, no accidental moving.
+        ui->actionLockToolbars->setChecked(true);
+        ui->actionLockToolbars->setVisible(false);
+        lockToolbars(true);
     }
     // start instance when double-clicked
     connect(view, &InstanceView::activated, this, &MainWindow::instanceActivated);
@@ -782,8 +786,119 @@ void MainWindow::defaultAccountChanged()
     ui->actionAccountsButton->setText(tr("Accounts"));
 }
 
+void MainWindow::updateMaximizeButton()
+{
+    if (m_maxButton)
+        m_maxButton->setText(isMaximized() ? QStringLiteral("❝") : QStringLiteral("□"));
+}
+
+void MainWindow::setupCustomTitleBar()
+{
+    // Frameless window with our own themed title bar, integrated with the dark UI (no OS title bar).
+    setWindowFlag(Qt::FramelessWindowHint, true);
+    setAttribute(Qt::WA_Hover, true);
+
+    m_titleBar = new QWidget(this);
+    m_titleBar->setObjectName(QStringLiteral("customTitleBar"));
+    m_titleBar->setFixedHeight(40);
+    m_titleBar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+
+    auto* lay = new QHBoxLayout(m_titleBar);
+    lay->setContentsMargins(12, 0, 6, 0);
+    lay->setSpacing(8);
+
+    auto* iconLabel = new QLabel(m_titleBar);
+    iconLabel->setObjectName(QStringLiteral("titleBarIcon"));
+    iconLabel->setPixmap(APPLICATION->logo().pixmap(20, 20));
+    lay->addWidget(iconLabel);
+
+    auto* titleLabel = new QLabel(BuildConfig.LAUNCHER_DISPLAYNAME, m_titleBar);
+    titleLabel->setObjectName(QStringLiteral("titleBarLabel"));
+    lay->addWidget(titleLabel);
+
+    lay->addStretch(1);
+
+    auto makeBtn = [&](const QString& glyph, const QString& objName) {
+        auto* b = new QToolButton(m_titleBar);
+        b->setObjectName(objName);
+        b->setText(glyph);
+        b->setFocusPolicy(Qt::NoFocus);
+        b->setFixedSize(44, 30);
+        lay->addWidget(b);
+        return b;
+    };
+    auto* minBtn = makeBtn(QStringLiteral("—"), QStringLiteral("winBtnMin"));
+    m_maxButton = makeBtn(QStringLiteral("□"), QStringLiteral("winBtnMax"));
+    auto* closeBtn = makeBtn(QStringLiteral("✕"), QStringLiteral("winBtnClose"));
+
+    connect(minBtn, &QToolButton::clicked, this, &QWidget::showMinimized);
+    connect(m_maxButton, &QToolButton::clicked, this, [this] {
+        isMaximized() ? showNormal() : showMaximized();
+        updateMaximizeButton();
+    });
+    connect(closeBtn, &QToolButton::clicked, this, &QWidget::close);
+
+    m_titleBar->installEventFilter(this);
+
+    // Host the title bar in a fixed full-width top toolbar. We deliberately avoid
+    // setMenuWidget(), which would delete the existing menu bar (still referenced
+    // elsewhere) and crash; this leaves the menu bar untouched.
+    auto* titleToolBar = new QToolBar(this);
+    titleToolBar->setObjectName(QStringLiteral("titleToolBar"));
+    titleToolBar->setMovable(false);
+    titleToolBar->setFloatable(false);
+    titleToolBar->setContextMenuPolicy(Qt::PreventContextMenu);
+    titleToolBar->addWidget(m_titleBar);
+    addToolBar(Qt::TopToolBarArea, titleToolBar);
+    addToolBarBreak(Qt::TopToolBarArea);
+
+    // A size grip gives a reliable resize handle on frameless windows; the app-wide
+    // event filter below adds edge resizing on all sides.
+    statusBar()->setSizeGripEnabled(true);
+    qApp->installEventFilter(this);
+}
+
 bool MainWindow::eventFilter(QObject* obj, QEvent* ev)
 {
+    // Custom title bar: drag to move, double-click to (un)maximize.
+    if (m_titleBar && obj == m_titleBar) {
+        if (ev->type() == QEvent::MouseButtonPress && static_cast<QMouseEvent*>(ev)->button() == Qt::LeftButton) {
+            if (auto* wh = windowHandle())
+                wh->startSystemMove();
+            return true;
+        }
+        if (ev->type() == QEvent::MouseButtonDblClick) {
+            isMaximized() ? showNormal() : showMaximized();
+            updateMaximizeButton();
+            return true;
+        }
+    }
+    // Frameless edge resize (all four sides / corners) via the windowing system.
+    if (m_titleBar && (ev->type() == QEvent::MouseButtonPress) && !isMaximized() && !isFullScreen()) {
+        if (auto* w = qobject_cast<QWidget*>(obj); w && w->window() == this) {
+            auto* me = static_cast<QMouseEvent*>(ev);
+            if (me->button() == Qt::LeftButton) {
+                const QPoint gp = me->globalPosition().toPoint();
+                const QRect g = geometry();
+                const int b = 6;
+                Qt::Edges edges;
+                if (gp.x() <= g.left() + b)
+                    edges |= Qt::LeftEdge;
+                else if (gp.x() >= g.right() - b)
+                    edges |= Qt::RightEdge;
+                if (gp.y() <= g.top() + b)
+                    edges |= Qt::TopEdge;
+                else if (gp.y() >= g.bottom() - b)
+                    edges |= Qt::BottomEdge;
+                if (edges != Qt::Edges()) {
+                    if (auto* wh = windowHandle()) {
+                        wh->startSystemResize(edges);
+                        return true;
+                    }
+                }
+            }
+        }
+    }
     if (obj == view) {
         if (ev->type() == QEvent::KeyPress) {
             secretEventFilter->input(ev);
@@ -1387,7 +1502,7 @@ void MainWindow::globalSettingsClosed()
     updateStatusCenter();
     // This needs to be done to prevent UI elements disappearing in the event the config is changed
     // but LauncherVit exits abnormally, causing the window state to never be saved:
-    APPLICATION->settings()->set("MainWindowState", QString::fromUtf8(saveState().toBase64()));
+    APPLICATION->settings()->set("MainWindowState", QString::fromUtf8(saveState(1).toBase64()));
     update();
 }
 
@@ -1592,7 +1707,7 @@ void MainWindow::on_actionViewSelectedInstFolder_triggered()
 void MainWindow::closeEvent(QCloseEvent* event)
 {
     // Save the window state and geometry.
-    APPLICATION->settings()->set("MainWindowState", QString::fromUtf8(saveState().toBase64()));
+    APPLICATION->settings()->set("MainWindowState", QString::fromUtf8(saveState(1).toBase64()));
     APPLICATION->settings()->set("MainWindowGeometry", QString::fromUtf8(saveGeometry().toBase64()));
     instanceToolbarSetting->set(QString::fromUtf8(ui->instanceToolBar->getVisibilityState().toBase64()));
     event->accept();

@@ -50,14 +50,14 @@ QString DarkTheme::name()
 QPalette DarkTheme::colorScheme()
 {
     QPalette darkPalette;
-    darkPalette.setColor(QPalette::Window, QColor(49, 49, 49));
+    darkPalette.setColor(QPalette::Window, QColor(27, 23, 38));       // #1B1726 dark purple-charcoal base
     darkPalette.setColor(QPalette::WindowText, Qt::white);
-    darkPalette.setColor(QPalette::Base, QColor(34, 34, 34));
-    darkPalette.setColor(QPalette::AlternateBase, QColor(42, 42, 42));
+    darkPalette.setColor(QPalette::Base, QColor(33, 28, 46));         // #211C2E card/list surface
+    darkPalette.setColor(QPalette::AlternateBase, QColor(42, 36, 62)); // #2A243E
     darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
     darkPalette.setColor(QPalette::ToolTipText, Qt::white);
     darkPalette.setColor(QPalette::Text, Qt::white);
-    darkPalette.setColor(QPalette::Button, QColor(48, 48, 48));
+    darkPalette.setColor(QPalette::Button, QColor(40, 34, 56));       // #282238
     darkPalette.setColor(QPalette::ButtonText, Qt::white);
     darkPalette.setColor(QPalette::BrightText, Qt::red);
     darkPalette.setColor(QPalette::Link, QColor(192, 132, 252));     // #C084FC - LauncherVit brand purple
@@ -74,7 +74,7 @@ double DarkTheme::fadeAmount()
 
 QColor DarkTheme::fadeColor()
 {
-    return QColor(49, 49, 49);
+    return QColor(27, 23, 38);
 }
 
 bool DarkTheme::hasStyleSheet()
@@ -105,8 +105,22 @@ QToolButton#actionLaunchInstance:pressed { background: #7E22CE; }
 QToolButton#actionLaunchInstance:disabled { background: rgba(168,85,247,0.28); color: rgba(255,255,255,0.5); }
 
 /* Account button (top-right): same width as the instance rail, sits above it */
-QToolButton#accountMenuButton { min-width: 176px; padding: 8px 16px; border-radius: 8px; text-align: center; font-weight: 600; }
-QToolButton#accountMenuButton::menu-indicator, QToolButton#accountMenuButton::menu-arrow { image: none; width: 0px; height: 0px; }
+/* ---- Left navigation rail (mainToolBar) ---- */
+QToolBar#mainToolBar { background: rgba(0,0,0,0.22); border: none; border-top-right-radius: 16px; border-bottom-right-radius: 16px; padding: 12px 8px; spacing: 8px; }
+QToolBar#mainToolBar QToolButton { min-width: 42px; min-height: 42px; padding: 8px; border-radius: 12px; }
+QToolBar#mainToolBar QToolButton:hover { background: rgba(168,85,247,0.20); border-color: transparent; }
+QToolBar#mainToolBar QToolButton:checked, QToolBar#mainToolBar QToolButton:pressed { background: #A855F7; }
+QToolBar#mainToolBar QToolButton#accountMenuButton { min-width: 42px; min-height: 42px; padding: 8px; border-radius: 21px; }
+QToolBar#mainToolBar QToolButton::menu-indicator, QToolBar#mainToolBar QToolButton::menu-arrow { image: none; width: 0px; height: 0px; }
+QToolBar#mainToolBar::separator { background: rgba(255,255,255,0.08); height: 1px; margin: 6px 10px; }
+
+/* ---- Custom title bar ---- */
+QToolBar#titleToolBar { padding: 0px; margin: 0px; border: none; spacing: 0px; background: #1B1726; }
+QWidget#customTitleBar { background: #1B1726; }
+QLabel#titleBarLabel { font-weight: 600; color: #ffffff; }
+QToolButton#winBtnMin, QToolButton#winBtnMax, QToolButton#winBtnClose { border: none; border-radius: 6px; background: transparent; color: rgba(255,255,255,0.75); font-size: 12pt; }
+QToolButton#winBtnMin:hover, QToolButton#winBtnMax:hover { background: rgba(168,85,247,0.25); color: #ffffff; }
+QToolButton#winBtnClose:hover { background: #e11d48; color: #ffffff; }
 
 /* ---- Push buttons ---- */
 QPushButton { border: 1px solid rgba(255,255,255,0.14); border-radius: 7px; padding: 7px 16px; min-height: 18px; }
