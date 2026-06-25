@@ -159,6 +159,9 @@
 #include <QStyleHints>
 #endif
 
+// Needed on all platforms for color-scheme detection in the setup wizard (QStyleHints::colorScheme).
+#include <QStyleHints>
+
 #include "console/Console.h"
 
 #define STRINGIFY(x) #x
