@@ -1672,6 +1672,16 @@ MainWindow* Application::showMainWindow(bool minimized)
         m_mainWindow->restoreState(QByteArray::fromBase64(APPLICATION->settings()->get("MainWindowState").toString().toUtf8()));
         m_mainWindow->restoreGeometry(QByteArray::fromBase64(APPLICATION->settings()->get("MainWindowGeometry").toString().toUtf8()));
 
+        // restoreGeometry() can restore an older size that's too short for the instance toolbar
+        // (and on some platforms it isn't clamped to the window's minimumSize). Grow it back so
+        // every instance action is always visible.
+        {
+            const QSize minUsable(700, 700);
+            QSize sz = m_mainWindow->size();
+            if (sz.width() < minUsable.width() || sz.height() < minUsable.height())
+                m_mainWindow->resize(sz.expandedTo(minUsable));
+        }
+
         if (minimized) {
             m_mainWindow->showMinimized();
         } else {
