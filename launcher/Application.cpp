@@ -640,8 +640,8 @@ Application::Application(int& argc, char** argv) : QApplication(argc, argv)
         m_settings.reset(new INISettingsObject({ BuildConfig.LAUNCHER_CONFIGFILE, "polymc.cfg", "multimc.cfg" }, this));
 
         // Theming
-        m_settings->registerSetting("IconTheme", QString());
-        m_settings->registerSetting("ApplicationTheme", QString());
+        m_settings->registerSetting("IconTheme", QString("flat"));
+        m_settings->registerSetting("ApplicationTheme", QString("dark"));
         m_settings->registerSetting("BackgroundCat", QString("kitteh"));
 
         // Remembered state
@@ -1234,13 +1234,13 @@ bool Application::createSetupWizard()
     if (wizardRequired) {
         // set default theme after going into theme wizard
         if (!validIcons)
-            settings()->set("IconTheme", QString("pe_colored"));
+            settings()->set("IconTheme", QString("flat"));
         if (!validWidgets) {
-#if defined(Q_OS_WIN32) && QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
             const QString style =
-                QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark ? QStringLiteral("dark") : QStringLiteral("bright");
+                QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Light ? QStringLiteral("bright") : QStringLiteral("dark");
 #else
-            const QString style = QStringLiteral("system");
+            const QString style = QStringLiteral("dark");
 #endif
 
             settings()->set("ApplicationTheme", style);

@@ -206,6 +206,11 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
 
         auto accountMenuButton = dynamic_cast<QToolButton*>(ui->mainToolBar->widgetForAction(ui->actionAccountsButton));
         accountMenuButton->setPopupMode(QToolButton::InstantPopup);
+        // Name it so the theme can size the account button to match the instance rail width.
+        accountMenuButton->setObjectName("accountMenuButton");
+        // Text-only so the label centers cleanly (Fusion left-aligns icon+text tool buttons and
+        // ignores text-align); this matches the centered text buttons of the instance rail.
+        accountMenuButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
 
         auto exportInstanceMenu = new QMenu(this);
         exportInstanceMenu->addAction(ui->actionExportInstanceZip);
