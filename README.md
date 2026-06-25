@@ -14,7 +14,7 @@
 </a>
 
 - All downloads and instructions for LauncherVit can be found on our [Website](https://launchervit.com/download).
-- Last build status can be found in the [GitHub Actions](https://github.com/launchervit/LauncherVit/actions) tab (this also includes the pull requests status).
+- Last build status can be found in the [GitHub Actions](https://github.com/EzfranQ/launchervit/actions) tab (this also includes the pull requests status).
 
 ### Development Builds
 
@@ -22,7 +22,7 @@ Please understand that these builds are not intended for most users. There may b
 
 There are development builds available through:
 
-- [GitHub Actions](https://github.com/launchervit/LauncherVit/actions) (includes builds from pull requests opened by contributors)
+- [GitHub Actions](https://github.com/EzfranQ/launchervit/actions) (includes builds from pull requests opened by contributors)
 - [nightly.link](https://launchervit.com/nightly) (this will always point only to the latest version of develop)
 
 These have debug information in the binaries, so their file sizes are relatively larger.
@@ -86,7 +86,7 @@ Note that if you build this software without removing the provided API keys in [
 
 If you do not agree with these terms and conditions, then remove the associated API keys from the [CMakeLists.txt](CMakeLists.txt) file by setting them to an empty string (`""`).
 
-## License [![https://github.com/launchervit/LauncherVit/blob/develop/LICENSE](https://img.shields.io/github/license/launchervit/LauncherVit?label=License&logo=gnu&color=C4282D)](LICENSE)
+## License [![https://github.com/EzfranQ/launchervit/blob/develop/LICENSE](https://img.shields.io/github/license/launchervit/LauncherVit?label=License&logo=gnu&color=C4282D)](LICENSE)
 
 All launcher code is available under the GPL-3.0-only license.
 

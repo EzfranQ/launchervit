@@ -12,7 +12,7 @@ set(Launcher_CommonName "LauncherVit")
 set(Launcher_DisplayName "LauncherVit")
 set(Launcher_AppID "com.launchervit.LauncherVit")
 set(Launcher_Domain "launchervit.com")
-set(Launcher_Git "https://github.com/launchervit/LauncherVit")
+set(Launcher_Git "https://github.com/EzfranQ/launchervit")
 
 set(Launcher_Name "${Launcher_CommonName}" PARENT_SCOPE)
 set(Launcher_DisplayName "${Launcher_DisplayName}" PARENT_SCOPE)
