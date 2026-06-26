@@ -12,7 +12,8 @@
       "Bash(python3 -c \"from PIL import Image; img=Image.open\\('/home/ezfran/Downloads/PrismLauncher-develop/logo-192x192.png'\\); print\\(img.size, img.mode\\)\")",
       "Bash(convert --version)",
       "Bash(git commit -m ' *)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(xargs ls -la)"
     ]
   }
 }
