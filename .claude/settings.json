@@ -6,7 +6,13 @@
       "Bash(python3 -c ' *)",
       "Bash(awk '{print $9, $5\"B\"}')",
       "Bash(sed 's#__TRACKED_VAR__/##')",
-      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('CustomSkinLoader/LocalSkin/skins/Ezfran.png'\\); print\\('skin', im.size, im.mode\\)\")"
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('CustomSkinLoader/LocalSkin/skins/Ezfran.png'\\); print\\('skin', im.size, im.mode\\)\")",
+      "Bash(awk '{print \" -\",$9}')",
+      "Bash(identify /home/ezfran/Downloads/PrismLauncher-develop/logo-192x192.png)",
+      "Bash(python3 -c \"from PIL import Image; img=Image.open\\('/home/ezfran/Downloads/PrismLauncher-develop/logo-192x192.png'\\); print\\(img.size, img.mode\\)\")",
+      "Bash(convert --version)",
+      "Bash(git commit -m ' *)",
+      "Bash(python3)"
     ]
   }
 }
