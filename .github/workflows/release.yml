@@ -45,50 +45,27 @@ jobs:
         run: |
           mv ${{ github.workspace }}/LauncherVit-source LauncherVit-${{ env.VERSION }}
           mv LauncherVit-Linux-Qt6-Portable*/LauncherVit-portable.tar.gz LauncherVit-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
-          mv LauncherVit-Linux-aarch64-Qt6-Portable*/LauncherVit-portable.tar.gz LauncherVit-Linux-aarch64-Qt6-Portable-${{ env.VERSION }}.tar.gz
           mv LauncherVit-*.AppImage/LauncherVit-*-x86_64.AppImage LauncherVit-Linux-x86_64.AppImage
           mv LauncherVit-*.AppImage.zsync/LauncherVit-*-x86_64.AppImage.zsync LauncherVit-Linux-x86_64.AppImage.zsync
-          mv LauncherVit-*.AppImage/LauncherVit-*-aarch64.AppImage LauncherVit-Linux-aarch64.AppImage
-          mv LauncherVit-*.AppImage.zsync/LauncherVit-*-aarch64.AppImage.zsync LauncherVit-Linux-aarch64.AppImage.zsync
-          mv LauncherVit-macOS*/LauncherVit.zip LauncherVit-macOS-${{ env.VERSION }}.zip
-          mv LauncherVit-macOS*/LauncherVit.dmg LauncherVit-macOS-${{ env.VERSION }}.dmg
 
           tar --exclude='.git' -czf LauncherVit-${{ env.VERSION }}.tar.gz LauncherVit-${{ env.VERSION }}
 
-          for d in LauncherVit-Windows-MSVC*; do
-            cd "${d}" || continue
-            LEGACY="$(echo -n ${d} | grep -o Legacy || true)"
-            ARM64="$(echo -n ${d} | grep -o arm64 || true)"
-            INST="$(echo -n ${d} | grep -o Setup || true)"
-            PORT="$(echo -n ${d} | grep -o Portable || true)"
-            NAME="LauncherVit-Windows-MSVC"
-            test -z "${LEGACY}" || NAME="${NAME}-Legacy"
-            test -z "${ARM64}" || NAME="${NAME}-arm64"
-            test -z "${PORT}" || NAME="${NAME}-Portable"
-            test -z "${INST}" || mv LauncherVit-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
-            test -n "${INST}" || zip -r -9 "../${NAME}-${{ env.VERSION }}.zip" *
+          for d in LauncherVit-Windows-MSVC-Setup*; do
+            [ -d "$d" ] || continue
+            mv "$d"/LauncherVit-*.exe LauncherVit-Windows-MSVC-Setup-${{ env.VERSION }}.exe
+          done
+
+          for d in LauncherVit-Windows-MSVC-Portable*; do
+            [ -d "$d" ] || continue
+            cd "$d"
+            zip -r -9 "../LauncherVit-Windows-MSVC-Portable-${{ env.VERSION }}.zip" *
             cd ..
           done
 
-          for d in LauncherVit-Windows-MinGW-w64*; do
-            cd "${d}" || continue
-            INST="$(echo -n ${d} | grep -o Setup || true)"
-            PORT="$(echo -n ${d} | grep -o Portable || true)"
-            NAME="LauncherVit-Windows-MinGW-w64"
-            test -z "${PORT}" || NAME="${NAME}-Portable"
-            test -z "${INST}" || mv LauncherVit-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
-            test -n "${INST}" || zip -r -9 "../${NAME}-${{ env.VERSION }}.zip" *
-            cd ..
-          done
-
-          for d in LauncherVit-Windows-MinGW-arm64*; do
-            cd "${d}" || continue
-            INST="$(echo -n ${d} | grep -o Setup || true)"
-            PORT="$(echo -n ${d} | grep -o Portable || true)"
-            NAME="LauncherVit-Windows-MinGW-arm64"
-            test -z "${PORT}" || NAME="${NAME}-Portable"
-            test -z "${INST}" || mv LauncherVit-*.exe ../${NAME}-Setup-${{ env.VERSION }}.exe
-            test -n "${INST}" || zip -r -9 "../${NAME}-${{ env.VERSION }}.zip" *
+          for d in LauncherVit-Windows-MSVC-[0-9]*; do
+            [ -d "$d" ] || continue
+            cd "$d"
+            zip -r -9 "../LauncherVit-Windows-MSVC-${{ env.VERSION }}.zip" *
             cd ..
           done
 
@@ -105,22 +82,8 @@ jobs:
           files: |
             LauncherVit-Linux-x86_64.AppImage
             LauncherVit-Linux-x86_64.AppImage.zsync
-            LauncherVit-Linux-aarch64.AppImage
-            LauncherVit-Linux-aarch64.AppImage.zsync
             LauncherVit-Linux-Qt6-Portable-${{ env.VERSION }}.tar.gz
-            LauncherVit-Linux-aarch64-Qt6-Portable-${{ env.VERSION }}.tar.gz
-            LauncherVit-Windows-MinGW-w64-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MinGW-w64-Portable-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MinGW-w64-Setup-${{ env.VERSION }}.exe
-            LauncherVit-Windows-MinGW-arm64-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MinGW-arm64-Portable-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MinGW-arm64-Setup-${{ env.VERSION }}.exe
-            LauncherVit-Windows-MSVC-arm64-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MSVC-arm64-Portable-${{ env.VERSION }}.zip
-            LauncherVit-Windows-MSVC-arm64-Setup-${{ env.VERSION }}.exe
             LauncherVit-Windows-MSVC-${{ env.VERSION }}.zip
             LauncherVit-Windows-MSVC-Portable-${{ env.VERSION }}.zip
             LauncherVit-Windows-MSVC-Setup-${{ env.VERSION }}.exe
-            LauncherVit-macOS-${{ env.VERSION }}.zip
-            LauncherVit-macOS-${{ env.VERSION }}.dmg
             LauncherVit-${{ env.VERSION }}.tar.gz
