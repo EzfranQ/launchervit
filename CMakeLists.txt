@@ -198,7 +198,7 @@ set(Launcher_BUILD_PLATFORM "unknown" CACHE STRING "A short string identifying t
 set(Launcher_UPDATER_GITHUB_REPO "https://github.com/EzfranQ/launchervit" CACHE STRING "Base github URL for the updater.")
 
 # Name to help updater identify valid artifacts
-set(Launcher_BUILD_ARTIFACT "" CACHE STRING "Artifact name to help the updater identify valid artifacts.")
+set(Launcher_BUILD_ARTIFACT "Linux-Qt6" CACHE STRING "Artifact name to help the updater identify valid artifacts.")
 
 # The metadata server
 set(Launcher_META_URL "https://meta.prismlauncher.org/v1/" CACHE STRING "URL to fetch Launcher's meta files from.")
