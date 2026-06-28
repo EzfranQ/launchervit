@@ -107,7 +107,7 @@
 
 #define IBUS "@im=ibus"
 
-[[maybe_unused]] static bool switcherooSetupGPU(QProcessEnvironment& env)
+[[maybe_unused]] static bool switcherooSetupGPU(QProcessEnvironment& env, const QString& gpuName = QString())
 {
 #ifdef WITH_QTDBUS
     if (!QDBusConnection::systemBus().isConnected())
@@ -132,7 +132,9 @@
         QString name = qvariant_cast<QString>(gpu[QStringLiteral("Name")]);
         bool defaultGpu = qvariant_cast<bool>(gpu[QStringLiteral("Default")]);
         bool discrete = qvariant_cast<bool>(gpu.value(QStringLiteral("Discrete"), !defaultGpu));
-        if (discrete) {
+
+        bool shouldUse = gpuName.isEmpty() ? discrete : (name == gpuName);
+        if (shouldUse) {
             QStringList envList = qvariant_cast<QStringList>(gpu[QStringLiteral("Environment")]);
             for (int i = 0; i + 1 < envList.size(); i += 2) {
                 env.insert(envList[i], envList[i + 1]);
@@ -142,6 +144,37 @@
     }
 #endif
     return false;
+}
+
+QList<MinecraftInstance::GpuEntry> MinecraftInstance::listGPUs()
+{
+    QList<GpuEntry> result;
+#ifdef WITH_QTDBUS
+    if (!QDBusConnection::systemBus().isConnected())
+        return result;
+
+    QDBusInterface switcheroo("net.hadess.SwitcherooControl", "/net/hadess/SwitcherooControl", "org.freedesktop.DBus.Properties",
+                              QDBusConnection::systemBus());
+    if (!switcheroo.isValid())
+        return result;
+
+    QDBusReply<QDBusVariant> reply =
+        switcheroo.call(QStringLiteral("Get"), QStringLiteral("net.hadess.SwitcherooControl"), QStringLiteral("GPUs"));
+    if (!reply.isValid())
+        return result;
+
+    QDBusArgument arg = qvariant_cast<QDBusArgument>(reply.value().variant());
+    QList<QVariantMap> gpus;
+    arg >> gpus;
+
+    for (const auto& gpu : gpus) {
+        GpuEntry entry;
+        entry.name = qvariant_cast<QString>(gpu[QStringLiteral("Name")]);
+        entry.isDefault = qvariant_cast<bool>(gpu[QStringLiteral("Default")]);
+        result.append(entry);
+    }
+#endif
+    return result;
 }
 
 // all of this because keeping things compatible with deprecated old settings
@@ -224,6 +257,7 @@ void MinecraftInstance::loadSpecificSettings()
         m_settings->registerOverride(global_settings->getSetting("EnableFeralGamemode"), performanceOverride);
         m_settings->registerOverride(global_settings->getSetting("EnableMangoHud"), performanceOverride);
         m_settings->registerOverride(global_settings->getSetting("UseDiscreteGpu"), performanceOverride);
+        m_settings->registerOverride(global_settings->getSetting("SelectedGpuName"), performanceOverride);
         m_settings->registerOverride(global_settings->getSetting("UseZink"), performanceOverride);
 
         // Miscellaneous
@@ -723,14 +757,26 @@ QProcessEnvironment MinecraftInstance::createLaunchEnvironment()
         env.insert("MANGOHUD", "1");
     }
 
-    if (settings()->get("UseDiscreteGpu").toBool()) {
-        if (!switcherooSetupGPU(env)) {
-            // Open Source Drivers
-            env.insert("DRI_PRIME", "1");
-            // Proprietary Nvidia Drivers
-            env.insert("__NV_PRIME_RENDER_OFFLOAD", "1");
-            env.insert("__VK_LAYER_NV_optimus", "NVIDIA_only");
-            env.insert("__GLX_VENDOR_LIBRARY_NAME", "nvidia");
+    {
+        QString selectedGpu = settings()->get("SelectedGpuName").toString();
+        bool useDiscreteGpu = settings()->get("UseDiscreteGpu").toBool();
+
+        bool shouldUseDedicatedGpu = !selectedGpu.isEmpty() || useDiscreteGpu;
+        if (shouldUseDedicatedGpu) {
+            bool handled = false;
+            if (!selectedGpu.isEmpty() && selectedGpu != "discrete") {
+                handled = switcherooSetupGPU(env, selectedGpu);
+            }
+            if (!handled) {
+                if (!switcherooSetupGPU(env)) {
+                    // Open Source Drivers
+                    env.insert("DRI_PRIME", "1");
+                    // Proprietary Nvidia Drivers
+                    env.insert("__NV_PRIME_RENDER_OFFLOAD", "1");
+                    env.insert("__VK_LAYER_NV_optimus", "NVIDIA_only");
+                    env.insert("__GLX_VENDOR_LIBRARY_NAME", "nvidia");
+                }
+            }
         }
     }
 

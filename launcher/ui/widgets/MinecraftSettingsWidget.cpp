@@ -141,6 +141,24 @@ MinecraftSettingsWidget::MinecraftSettingsWidget(MinecraftInstance* instance, QW
         m_ui->enableMangoHud->setToolTip(tr("MangoHud could not be found on your system."));
     }
 
+#ifdef Q_OS_LINUX
+    {
+        m_ui->gpuComboBox->clear();
+        m_ui->gpuComboBox->addItem(tr("Default GPU"), QString(""));
+        auto gpus = MinecraftInstance::listGPUs();
+        if (!gpus.isEmpty()) {
+            for (const auto& gpu : gpus) {
+                QString label = gpu.name;
+                if (gpu.isDefault)
+                    label += tr(" (Default)");
+                m_ui->gpuComboBox->addItem(label, gpu.name);
+            }
+        } else {
+            m_ui->gpuComboBox->addItem(tr("Discrete GPU"), QString("discrete"));
+        }
+    }
+#endif
+
     connect(m_ui->useNativeOpenALCheck, &QAbstractButton::toggled, m_ui->lineEditOpenALPath, &QWidget::setEnabled);
     connect(m_ui->useNativeGLFWCheck, &QAbstractButton::toggled, m_ui->lineEditGLFWPath, &QWidget::setEnabled);
 
@@ -220,7 +238,13 @@ void MinecraftSettingsWidget::loadSettings()
     m_ui->perfomanceGroupBox->setChecked(m_instance == nullptr || settings->get("OverridePerformance").toBool());
     m_ui->enableFeralGamemodeCheck->setChecked(settings->get("EnableFeralGamemode").toBool());
     m_ui->enableMangoHud->setChecked(settings->get("EnableMangoHud").toBool());
-    m_ui->useDiscreteGpuCheck->setChecked(settings->get("UseDiscreteGpu").toBool());
+    {
+        QString selectedGpu = settings->get("SelectedGpuName").toString();
+        if (selectedGpu.isEmpty() && settings->get("UseDiscreteGpu").toBool())
+            selectedGpu = QStringLiteral("discrete");
+        int idx = m_ui->gpuComboBox->findData(selectedGpu);
+        m_ui->gpuComboBox->setCurrentIndex(idx >= 0 ? idx : 0);
+    }
     m_ui->useZink->setChecked(settings->get("UseZink").toBool());
 
     if (m_instance != nullptr) {
@@ -410,12 +434,17 @@ void MinecraftSettingsWidget::saveSettings()
         if (performance) {
             settings->set("EnableFeralGamemode", m_ui->enableFeralGamemodeCheck->isChecked());
             settings->set("EnableMangoHud", m_ui->enableMangoHud->isChecked());
-            settings->set("UseDiscreteGpu", m_ui->useDiscreteGpuCheck->isChecked());
+            {
+                QString selectedGpu = m_ui->gpuComboBox->currentData().toString();
+                settings->set("SelectedGpuName", selectedGpu);
+                settings->set("UseDiscreteGpu", selectedGpu == QStringLiteral("discrete"));
+            }
             settings->set("UseZink", m_ui->useZink->isChecked());
         } else {
             settings->reset("EnableFeralGamemode");
             settings->reset("EnableMangoHud");
             settings->reset("UseDiscreteGpu");
+            settings->reset("SelectedGpuName");
             settings->reset("UseZink");
         }
 

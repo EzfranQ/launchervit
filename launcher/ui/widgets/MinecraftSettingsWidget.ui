@@ -763,14 +763,28 @@ It is most likely you will need to change the path - please refer to the mod's w
                </widget>
               </item>
               <item>
-               <widget class="QCheckBox" name="useDiscreteGpuCheck">
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the discrete GPU instead of the primary GPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Use discrete GPU</string>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout">
+                <item>
+                 <widget class="QLabel" name="gpuLabel">
+                  <property name="text">
+                   <string>GPU to use:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="gpuComboBox">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select which GPU to use when running the game. When switcheroo-control is available, detected GPUs are listed by name. Otherwise, &quot;Discrete GPU&quot; applies generic PRIME offload variables.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
                <widget class="QCheckBox" name="useZink">
@@ -925,7 +939,7 @@ It is most likely you will need to change the path - please refer to the mod's w
   
   <tabstop>enableFeralGamemodeCheck</tabstop>
   <tabstop>enableMangoHud</tabstop>
-  <tabstop>useDiscreteGpuCheck</tabstop>
+  <tabstop>gpuComboBox</tabstop>
   <tabstop>useZink</tabstop>
  </tabstops>
  <resources/>
