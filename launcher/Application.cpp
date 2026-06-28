@@ -768,6 +768,7 @@ Application::Application(int& argc, char** argv) : QApplication(argc, argv)
         m_settings->registerSetting("EnableFeralGamemode", false);
         m_settings->registerSetting("EnableMangoHud", false);
         m_settings->registerSetting("UseDiscreteGpu", false);
+        m_settings->registerSetting("SelectedGpuName", QString(""));
         m_settings->registerSetting("UseZink", false);
 
         // Game time

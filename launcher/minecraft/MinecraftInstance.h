@@ -56,6 +56,12 @@ class PackProfile;
 class MinecraftInstance : public BaseInstance {
     Q_OBJECT
    public:
+    struct GpuEntry {
+        QString name;
+        bool isDefault;
+    };
+    static QList<GpuEntry> listGPUs();
+
     MinecraftInstance(SettingsObject* globalSettings, std::unique_ptr<SettingsObject> settings, const QString& rootDir);
     virtual ~MinecraftInstance();
     virtual void saveNow() override;
